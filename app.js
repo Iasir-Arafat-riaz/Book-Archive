@@ -27,7 +27,7 @@ const allBooks = (books) => {
                         <div class="card-body">
                           <h4 class="card-title">Book Name: ${book.title}</h4>
                           <h6>Writer: ${book.author_name} </h6>
-                          <p>Publisher: ${book.publisher.slice(0,50)}</p>
+                          <p>Publisher: ${book.publisher[0]}</p>
                           <p>First published Year: ${book.first_publish_year} </p>
                           
                         </div>
