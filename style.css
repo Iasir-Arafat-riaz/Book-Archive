@@ -1,0 +1,12 @@
+span{
+    color:rgb(37, 122, 108);
+}
+body{
+    background-color: rgb(236, 231, 231);
+}
+#books-parent{
+    margin: 10px;
+}
+.image{
+    height:350px
+}
