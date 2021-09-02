@@ -56,13 +56,14 @@ const allBooks = (books) => {
                            <img class="image" src="https://covers.openlibrary.org/b/id/${book.cover_i}-M.jpg" class="card-img-top" alt="...">
                           <div class="card-body">
                              <h6 class="card-title">Book Name: <span>${book.title}</span></h6>
-                             <p>Writer: <span>${book.author_name[0]}</span> <p>
-                             <p>Publisher: <span>${book.publisher[0]} </span></p>
+                             <p>Writer: <span>${book.author_name.length!==0? book.author_name[0]:"writer not found"}</span> <p>
+                             <p>Publisher: <span>${book.publisher.length!==0?book.publisher[0]:"publisher not found"} </span></p>
                              <p>First published Year: <span>${book.first_publish_year}<span> </p>
                          </div>
                         </div>
           `;
           bookParentDiv.appendChild(bookCard)
+    
     });
   }
  
