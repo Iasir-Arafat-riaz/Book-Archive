@@ -1,9 +1,12 @@
+//Search input DOM
 const searchField = document.getElementById("search-field");
+//Book Cards parent Div DOM
 const bookParentDiv = document.getElementById("books-parent");
+//Tex Message DOM
 const bookFound = document.getElementById("bookFound")
 bookFound.innerText=""
 
-
+//use Async & await for data load from api
 const searchButton = async () => {
   
   const fieldValue = searchField.value;
@@ -17,15 +20,15 @@ const searchButton = async () => {
 };
 //declare arrow function for bonus requirement
 const allBooks = (books) => {
-  //console.log(books);
-  //apply triple equal for bonus requirement
+  
+  //apply triple equal for bonus requirement  & Error handle when you don't input any data
   if(searchField.value===""){
     bookParentDiv.textContent=""
     bookFound.style.color="orange"
     bookFound.innerText="OOOPS..you did't write anything..please write book name"
     console.log("empty")
   }
-  //apply triple equal for bonus requirement
+  //apply triple equal for bonus requirement & Error handle when you input wrong book name
   else if(books.numFound===0){
     searchField.value=""
     bookParentDiv.textContent=""
@@ -47,6 +50,7 @@ const allBooks = (books) => {
       const bookCard = document.createElement("div");
       bookCard.classList.add("col-lg-3");
       
+      //apply cover icon for bonus requirement 
       bookCard.innerHTML = `
                         <div class="card">
                            <img class="image" src="https://covers.openlibrary.org/b/id/${book.cover_i}-M.jpg" class="card-img-top" alt="...">
@@ -63,3 +67,7 @@ const allBooks = (books) => {
   }
  
 };
+
+
+
+//--------THANKS TO YOU FOR YOUR TIME & SUPPORT-----------

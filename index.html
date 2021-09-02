@@ -9,30 +9,38 @@
     <!-- boots Trap CDN -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-        <link rel="stylesheet" href="style.css">
+    <!-- link  to CSS -->
+    <link rel="stylesheet" href="style.css">
 
 </head>
 
 <body>
+    <!-- Header Part -->
     <header>
         <h1 class="text-center">Book-Archive</h1>
         <div class="input-group mb-3 justify-content-center">
-            
-            <input id="search-field" type="text" placeholder="Here search book name" aria-label="Example text with button addon"
-                aria-describedby="button-addon1">
-                <button onclick="searchButton()" class="btn btn-dark" type="button" id="button-addon1">Button</button>
+            <input id="search-field" type="text" placeholder="Here search book name"
+                aria-label="Example text with button addon" aria-describedby="button-addon1">
+            <button onclick="searchButton()" class="btn btn-dark" type="button" id="button-addon1">Button</button>
         </div>
+
         <h2 class="text-center" id="bookFound"></h2>
+
     </header>
+
     <main>
-        <!-- books highlights area -->
+        <!-- books highlights area for details all book -->
         <section>
-            <div id="books-parent" class="row row-cols-1 row-cols-md-3 g-4">
-                
-              </div>
+           
+            <div id="books-parent" class="row row-cols-1 row-cols-md-3 g-4"> </div>
+
         </section>
     </main>
+    <!-- link to JS -->
     <script src="app.js"></script>
 </body>
 
 </html>
+
+
+<!-- -----------Thank You ------------->

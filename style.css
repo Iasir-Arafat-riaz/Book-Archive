@@ -1,6 +1,4 @@
-span{
-    color:rgb(37, 122, 108);
-}
+
 body{
     background-color: rgb(236, 231, 231);
 }
@@ -9,4 +7,7 @@ body{
 }
 .image{
     height:350px
+}
+span{
+    color:rgb(37, 122, 108);
 }
