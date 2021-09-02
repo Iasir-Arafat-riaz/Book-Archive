@@ -8,6 +8,7 @@ bookFound.innerText=""
 
 //use Async & await for data load from api
 const searchButton = async () => {
+  bookParentDiv.textContent=""
   
   const fieldValue = searchField.value;
   const url = `https://openlibrary.org/search.json?q=${fieldValue}`;
@@ -23,7 +24,6 @@ const allBooks = (books) => {
   
   //apply triple equal for bonus requirement  & Error handle when you don't input any data
   if(searchField.value===""){
-    bookParentDiv.textContent=""
     bookFound.style.color="orange"
     bookFound.innerText="OOOPS..you did't write anything..please write book name"
     
@@ -31,15 +31,13 @@ const allBooks = (books) => {
   //apply triple equal for bonus requirement & Error handle when you input wrong book name
   else if(books.numFound===0){
     searchField.value=""
-    bookParentDiv.textContent=""
     bookFound.style.color="red"
-    bookFound.innerText="No result found"
+    bookFound.innerText="No result found!!! Try Again"
     
    
   }
   else{
     searchField.value=""
-    bookParentDiv.textContent=""
     bookFound.style.color="green"
     
     bookFound.innerText= `Total Book found: ${books.numFound}`
@@ -75,4 +73,4 @@ const allBooks = (books) => {
 
 
 
-//--------THANKS TO YOU FOR YOUR TIME & SUPPORT-----------
+//------------------THANKS TO YOU FOR YOUR TIME & SUPPORT-----------
