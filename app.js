@@ -51,18 +51,21 @@ const allBooks = (books) => {
       bookCard.classList.add("col-lg-3");
       
       //apply cover icon for bonus requirement 
+      //use turnery operator when missing data in JSON
+      const a=0
       bookCard.innerHTML = `
                         <div class="card">
-                           <img class="image" src="https://covers.openlibrary.org/b/id/${book.cover_i}-M.jpg" class="card-img-top" alt="...">
+                           <img class="image" src="https://covers.openlibrary.org/b/id/${book.cover_i!==undefined? book.cover_i:9317727}-M.jpg" class="card-img-top" alt="...">
                           <div class="card-body">
                              <h6 class="card-title">Book Name: <span>${book.title}</span></h6>
                              <p>Writer: <span>${book.author_name.length!==0? book.author_name[0]:"writer not found"}</span> <p>
                              <p>Publisher: <span>${book.publisher.length!==0?book.publisher[0]:"publisher not found"} </span></p>
-                             <p>First published Year: <span>${book.first_publish_year}<span> </p>
+                             <p>First published Year: <span>${book.first_publish_year>1?book.first_publish_year : "Published date not found" }<span> </p>
                          </div>
                         </div>
           `;
           bookParentDiv.appendChild(bookCard)
+          
     
     });
   }
