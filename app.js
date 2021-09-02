@@ -26,7 +26,7 @@ const allBooks = (books) => {
     bookParentDiv.textContent=""
     bookFound.style.color="orange"
     bookFound.innerText="OOOPS..you did't write anything..please write book name"
-    console.log("empty")
+    
   }
   //apply triple equal for bonus requirement & Error handle when you input wrong book name
   else if(books.numFound===0){
@@ -46,7 +46,7 @@ const allBooks = (books) => {
     const booksArray = books.docs;
     //apply forEach for bonus requirement
     booksArray.forEach((book) => {
-      console.log(book)
+     
       const bookCard = document.createElement("div");
       bookCard.classList.add("col-lg-3");
       
